@@ -11,7 +11,7 @@ from tqdm import tqdm
 
 
 class ConvNetwork(torch.nn.Module):
-  def __init__(self,Q, steps):
+  def __init__(self, Q, steps):
     super(ConvNetwork, self).__init__()
 
     self.conv1 = torch.nn.Conv2d(in_channels=1, out_channels=Q, kernel_size=(1+2*steps,1+2*steps), stride=1, padding=0, padding_mode="circular")
